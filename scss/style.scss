@@ -1,0 +1,139 @@
+
+@import url('https://fonts.googleapis.com/css?family=Anton|Monoton|Sarala');
+
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+
+
+
+
+.navbar {
+  background-color: #daa520;
+  height: 80px;
+  width: 100%;
+  z-index: 10;
+  margin: 0px;
+  border: none;
+}
+
+ .container-fluid .navbar-header a {
+  font-family: "Monoton";
+  font-size: 40px;
+  color: #373854;
+  text-decoration: overline;
+}
+
+.ul {
+  display: block;
+}
+
+.nav.navbar-nav li a{
+  display: block;
+  font-size: 25px;
+  font-family: "Anton";
+  color: #373854;
+  text-decoration: overline;
+}
+
+body {
+  background-color: #daa520;
+}
+
+
+.container {
+  background-color: black;
+  width: 60%;
+  max-width: 100%;
+}
+
+.row>div{
+  font-family: "Sarala";
+  color: #ffffff;
+  font-size: 20px;
+  line-height: 180%;
+  height: 400px;
+  border: 3px solid black;
+}
+
+.boxstyles {
+   width: 100%;
+  
+}
+
+#intro{
+  width: 500px;
+  margin-left: 80px;
+  margin-top: 80px;
+  margin-bottom: 100px;
+}
+
+div>[src] {
+  float: left;
+  margin-top: 5%;
+  margin-left: -10px;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%
+}
+
+
+hr {
+ width: 550px;
+ border-top: 3px inset #daa520;
+ margin-top: 30px;
+  margin-bot: 20px;
+}
+
+hr:after {
+  font-family: 'Glyphicons Halflings';
+  content:"\270f";
+  float: right;
+  margin-top: -29px;
+  margin-right: -21px;
+  color: #daa520;
+}
+
+
+h2 {
+  text-align: center;
+}
+
+#portfolio{
+ height: auto;
+}
+
+#portfolio ul {
+  list-style: none;
+  margin-top: 50px;
+  padding: 0px;
+  margin-left: 20px;
+}
+
+#portfolio ul li {
+  display: inline-block;
+  max-width: 360px;
+  margin: 5px;
+}
+
+#portfolio img{
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 5px;
+  border: 1px solid #daa520;
+}
+
+#footer {
+  background-color: #daa520;
+}
+
+#footer div{
+  text-align: center;
+}
+
+#footer i {
+  font-size: 100px;
+  color: black;
+  text-align: center;
+  margin: 50px;
+  margin-bottom: 0%;
+  margin-top: 0%;
+}
