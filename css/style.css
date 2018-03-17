@@ -1,129 +1,126 @@
-@import url("https://fonts.googleapis.com/css?family=Anton|Monoton|Sarala");
+
+@import url('https://fonts.googleapis.com/css?family=Anton|Monoton|Sarala');
+
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
-.navbar {
+
+:root {
+  --main-text-color: #373854;
+}
+
+html, body {
+  min-height: 100%;
   background-color: #daa520;
-  height: 80px;
+  margin: 0;
+  box-sizing: border-box
+}
+
+#grid {
   width: 100%;
-  z-index: 10;
-  margin: 0px;
-  border: none;
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+  grid-template-rows: auto;
+  grid-template-areas: "header header header"
+                       ". main ."
+                       "footer footer footer"
 }
 
-.container-fluid .navbar-header a {
-  font-family: "Monoton";
-  font-size: 40px;
-  color: #373854;
+header {
+  grid-area: header;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+main {
+  grid-area: main;
+  background-color: white;
+  max-height: 100%;
+}
+
+sidebar {
+  grid-area: aside
+}
+
+footer {
+  grid-area: footer;
+  display: flex;
+  justify-content: center;
+}
+
+header h1 {
+  font-family: monoton;
+  font-size: 60px;
+  color: var(--main-text-color);
   text-decoration: overline;
+  margin: 0;
+  white-space: nowrap;
+  text-decoration-style: dashed;
+  font-weight: 400;
 }
 
-.ul {
-  display: block;
+header ul {
+  padding: 0;
 }
 
-.nav.navbar-nav li a {
-  display: block;
+header ul li {
+  display: inline;
+  margin-right: 5px;
+}
+
+header ul li a {
   font-size: 25px;
-  font-family: "Anton";
-  color: #373854;
+  color: var(--main-text-color);
   text-decoration: overline;
 }
 
-body {
-  background-color: #daa520;
+#about:after {
+  display: block;
+  content: "";
+  clear: both;
 }
 
-.container {
-  background-color: black;
-  width: 60%;
-  max-width: 100%;
+img:after {
+  display: block;
+  content: "";
+  clear: both;
 }
 
-.row > div {
-  font-family: "Sarala";
-  color: #ffffff;
-  font-size: 20px;
-  line-height: 180%;
-  height: 400px;
-  border: 3px solid black;
-}
-
-.boxstyles {
-  width: 100%;
-}
-
-#intro {
-  width: 500px;
-  margin-left: 80px;
-  margin-top: 80px;
-  margin-bottom: 100px;
-}
-
-div > [src] {
-  float: left;
-  margin-top: 5%;
-  margin-left: -10px;
+#about img {
+  float: right;
   width: 350px;
   height: 350px;
-  border-radius: 50%;
 }
 
-hr {
-  width: 550px;
-  border-top: 3px inset #daa520;
-  margin-top: 30px;
-  margin-bot: 20px;
+#projects {
+  background: red;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end
 }
 
-hr:after {
-  font-family: 'Glyphicons Halflings';
-  content: "\270f";
-  float: right;
-  margin-top: -29px;
-  margin-right: -21px;
-  color: #daa520;
+#projects div{
+  height: 100px;
+  width: 200px;
+  background-color: black;
 }
 
-h2 {
-  text-align: center;
+#projects ul {
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  align-self: center;
 }
 
-#portfolio {
-  height: auto;
-}
-
-#portfolio ul {
-  list-style: none;
-  margin-top: 50px;
-  padding: 0px;
-  margin-left: 20px;
-}
-
-#portfolio ul li {
+#projects ul li {
   display: inline-block;
-  max-width: 360px;
-  margin: 5px;
 }
 
-#portfolio img {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 5px;
-  border: 1px solid #daa520;
-}
-
-#footer {
-  background-color: #daa520;
-}
-
-#footer div {
-  text-align: center;
-}
-
-#footer i {
+footer  i.fa {
   font-size: 100px;
   color: black;
   text-align: center;
-  margin: 50px;
-  margin-bottom: 0%;
-  margin-top: 0%;
+  margin: 0 50px;
 }
+
