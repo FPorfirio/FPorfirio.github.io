@@ -19,12 +19,19 @@
         </ul>
       </nav>
     </header>
-    <aside> 
+    <aside id="aside"> 
+      <button id="about_btn"><i class="fas fa-cog menuIcons">Boton 1</i></button>
+      <button id="Projects_btn"><i class="fas fa-cog menuIcons">Boton 2</i></button>
+      <button id="tools_btn"><i class="fas fa-cog menuIcons">Boton 1</i></button>
+      <button id="contact_btn"><i class="fas fa-cog menuIcons">Boton 2</i></button>
     </aside>
     <main>
+      <div class="door-right door"></div>
+      <div class="door-left door"></div>
       <section id="about">
-          <img src="http://letzgro.net/wp-content/uploads/2016/07/Web-Developer-Skills-1.jpg" alt="DevPhoto">
-
+        <h2>About Me</h2>
+        <hr>
+        <img src="https://comps.canstockphoto.com/web-developer-design-drawing_csp31998791.jpg" alt="DevPhoto">
         <p>Front-End Developer and UX/UI designer, with practical experience in project management, branding strategy, and creative direction; devoted to functional programming and information architecture</p>
         <p>Web Developer - User Experience Designer - Graphic Artist</p>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique, quam. Sunt aut voluptatum, odio eum cum rem explicabo iste quaerat dolorem veritatis impedit laboriosam fugiat soluta incidunt iure veniam obcaecati.</p>
@@ -32,10 +39,16 @@
       <section id="tools">
         <h2>Tools</h2>
         <hr>
+        <ul>
+          <li><i class="fab fa-js-square toolsIcons"></i></li>
+          <li><i class="fab fa-html5 toolsIcons"></i></li>
+          <li><i class="fab fa-css3 toolsIcons"></i></li>
+          <li><i class="icon-ruby-on-rails toolsIcons"></i>          </li>
+        </ul>
       </section>
-      <h2>Projects</h2>
-      <hr>
       <section id="projects">
+        <h2>Projects</h2>
+        <hr>
         <ul>
           <li><img src="http://via.placeholder.com/350x150"></li>
           <li><img src="http://via.placeholder.com/350x150"></li>
@@ -47,14 +60,16 @@
       <section id="contact">
         <h2>CONTACT ME</h2>
         <hr>
-        <div>
-          <a href="https://twitter.com"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-          <a href="https://facebook.com>"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
-          <a href="https://github.com"><i class="fa fa-github-square" aria-hidden="true"></i></a>
-        </div>
+        <ul>
+          <li><a href="https://twitter.com"><i class="fab fa-js-square contactIcons" aria-hidden="true"></i></a></li>
+          <li><a href="https://facebook.com>"><i class="fab fa-facebook-square contactIcons" aria-hidden="true"></i></a></li>
+          <li><a href="https://github.com"><i class="fab fa-github-square contactIcons" aria-hidden="true"></i></a></li>
+        </ul>
       </section>
     </footer>
   </div>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="javascript.js"></script>
 </body>
 </html>
 

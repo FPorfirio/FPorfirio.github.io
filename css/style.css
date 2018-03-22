@@ -1,26 +1,29 @@
 
-@import url('https://fonts.googleapis.com/css?family=Anton|Monoton|Sarala');
+@import url('https://fonts.googleapis.com/css?family=Anton|Monoton|Sarala|Mina');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-mfizz/2.4.1/font-mfizz.css');
 
-@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
 
 :root {
-  --main-text-color: #373854;
+  --main-header-color: #373854;
+  --sub-header-color: #daa520;;
+  --sub-header-font: 'anton', sans-serif;
+  --main-text-font: 'Mina', sans-serif;
+  --main-text-color: white;
 }
 
 html, body {
-  min-height: 100%;
+  height: 100%;
   background-color: #daa520;
   margin: 0;
-  box-sizing: border-box
+  box-sizing: border-box;
 }
 
 #grid {
-  width: 100%;
   display: grid;
   grid-template-columns: 20% 60% 20%;
   grid-template-rows: auto;
   grid-template-areas: "header header header"
-                       ". main ."
+                       "sidebar main ."
                        "footer footer footer"
 }
 
@@ -33,14 +36,20 @@ header {
   justify-content: space-evenly;
 }
 
-main {
-  grid-area: main;
-  background-color: white;
-  max-height: 100%;
+aside {
+  grid-area: sidebar;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
-sidebar {
-  grid-area: aside
+main {
+  box-sizing: border-box;
+  grid-area: main;
+  background-color: #252525 ;
+  height: 100%;
+  padding: 1% 0 5% 5%;
+  position: relative;
 }
 
 footer {
@@ -49,30 +58,61 @@ footer {
   justify-content: center;
 }
 
+
+aside button {
+  width: 25%;
+}
+
+.menuIcons {
+  font-size: 50px;
+  color: grey;
+}
+
 header h1 {
   font-family: monoton;
-  font-size: 60px;
-  color: var(--main-text-color);
+  font-size: 50px;
+  color: var(--main-header-color);
   text-decoration: overline;
-  margin: 0;
   white-space: nowrap;
-  text-decoration-style: dashed;
   font-weight: 400;
+  margin-top: 0.5%;
+  margin-bottom: 0px;
 }
 
 header ul {
   padding: 0;
+  margin: 0;
+}
+
+ul :last-child {
+  margin: 0;
 }
 
 header ul li {
-  display: inline;
-  margin-right: 5px;
+  display: inline-block;
+  overflow: hidden;
+  margin-right: 10px;
 }
 
 header ul li a {
-  font-size: 25px;
-  color: var(--main-text-color);
+  font-family: var(--sub-header-font);
+  font-size: 30px;
+  color: var(--main-header-color);
   text-decoration: overline;
+}
+
+section h2 {
+  font-family: var(--sub-header-font);
+  color: var(--sub-header-color);
+  font-size: 35px;
+  margin: 0;
+  text-align: left;
+}
+
+section p {
+  font-family: var(--main-text-font);
+  color: var(--main-text-color);
+  font-size: 22px;
 }
 
 #about:after {
@@ -89,21 +129,29 @@ img:after {
 
 #about img {
   float: right;
-  width: 350px;
-  height: 350px;
+  width: 28%;
+  border-radius: 50%;
+  margin-right: 1%;
 }
 
-#projects {
-  background: red;
+.toolsIcons {
+  color: #808080;
+  font-size: 100px;
+}
+
+#tools ul {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end
+  justify-content: space-around;
+  padding: 0;
 }
 
-#projects div{
-  height: 100px;
-  width: 200px;
-  background-color: black;
+#tools ul li {
+  display: inline; 
+  margin-left: 10px;
+}
+
+#tools ul li:nth-child(even){
+  margin-top: 10%;
 }
 
 #projects ul {
@@ -111,16 +159,65 @@ img:after {
   padding: 0;
   margin: 0;
   align-self: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
 }
 
 #projects ul li {
-  display: inline-block;
+  list-style-type: none;
+  flex-shrink: 1;
 }
 
-footer  i.fa {
+ul li img {
+  width: 100%;
+}
+
+footer ul {
+  padding: 0;
+  margin: 0;
+}
+
+footer ul li {
+  list-style-type: none;
+  display: inline;
+}
+
+.contactIcons {
   font-size: 100px;
   color: black;
   text-align: center;
   margin: 0 50px;
+}
+
+/*
+******* Animations *******
+*/
+
+.door { 
+width: 50%;
+height: 100%;
+position: absolute;
+transition: width 2s;
+}
+
+.door-right {
+  background: url("../assets/puertaderecha.png");
+  margin-top: -1%;
+  margin-left: -4.99%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.door-left {
+  background: url("../assets/puertaizquierda.png");
+  margin-top: -1%;
+  right: 0px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.open {
+  width: 0%;
 }
 
