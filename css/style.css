@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css?family=Anton|Monoton|Sarala|Mina');
+@import url('https://fonts.googleapis.com/css?family=Anton|Monoton|Sarala|Mina|Fascinate+Inline');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-mfizz/2.4.1/font-mfizz.css');
 
 
@@ -9,11 +9,13 @@
   --sub-header-font: 'anton', sans-serif;
   --main-text-font: 'Mina', sans-serif;
   --main-text-color: white;
+  --h3-color: #0080C0;
+  --try: 'Fascinate+Inline', sans-serif;
 }
 
 html, body {
   height: 100%;
-  background-color: #daa520;
+  background-color: var(--sub-header-color);
   margin: 0;
   box-sizing: border-box;
 }
@@ -110,6 +112,18 @@ section h2 {
   text-align: left;
 }
 
+section hr {
+  border-style: solid solid solid solid;
+  border-width: 15px 20px 20px 15px;
+  border-color: #252525 var(--sub-header-color) var(--sub-header-color) #252525;
+  margin-top: -1.5%;
+  margin-bottom: 0;
+}
+
+section #description {
+  padding-left: 2%;
+}
+
 section p {
   font-family: var(--main-text-font);
   color: var(--main-text-color);
@@ -140,27 +154,42 @@ img:after {
 }
 
 .toolsIcons {
-  color: #0080C0;
+  color: var(--h3-color);
   font-size: 150px;
 }
 
 #tools ul {
+  box-sizing: border-box;
   display: flex;
-  padding: 0;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  list-style-type: none;
+  padding: 0 5% 0 2%;
+  flex-wrap: wrap;
+  text-align: center;
 }
 
 #tools ul li {
-  display: inline; 
 }
 
-#tools ul li span {
-  display: block;
-  text-align: center;
-  color: #0080C0;
-  font-family: var(--sub-header-font);
-  font-size: 30px;
-  font-weight: 20
+#tools ul li h3 {
+  font-family: var(--try);
+  font-size: 25px;
+  color: var(--h3-color);
+  font-weight: 900;
+  text-decoration: overline underline;
+  margin-bottom: 0;
+}
+
+#tools ul li ul {
+  display: inline; 
+  list-style-type: none;
+  padding: 0;
+}
+
+#tools ul li ul li {
+  font-family: var(--main-text-font);
+  color: #FF8080;
+  font-size: 22px;
 }
 
 #tools ul li:nth-child(even){
@@ -168,8 +197,8 @@ img:after {
 
 #projects ul {
   text-decoration: none;
-  padding: 0 5% 0 0;
-  margin: 0;
+  padding: 0 5% 0 2%;
+  margin-top: 3%;
   align-self: center;
   display: flex;
   flex-direction: row;
@@ -256,5 +285,39 @@ transition: width 2s;
   }
   to{
     transform: rotate(360deg)
+  }
+}
+
+@media only screen and (max-width:1029px){
+  #tools ul {
+    padding: 0;
+    justify-content: space-evenly;
+    text-align: left;
+  }
+  
+  #tools ul li {
+    flex-basis: 40%;
+  }
+
+  #projects ul {
+    justify-content: space-evenly
+  }
+
+  #projects ul li {
+    width: 95%;
+  }
+}
+
+@media only screen and (max-width:609px){
+  header h1 {
+    font-size: 35px;
+  }
+  
+  #tools ul {
+    justify-content: space-around;
+  }
+
+  #tools ul li {
+    flex-basis: 80%;
   }
 }
