@@ -1,10 +1,9 @@
-
 @import url('https://fonts.googleapis.com/css?family=Anton|Monoton|Sarala|Mina|Fascinate+Inline');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-mfizz/2.4.1/font-mfizz.css');
 
 
 :root {
-  --main-header-color: #373854;
+  --main-header-color: #252525;
   --sub-header-color: #daa520;;
   --sub-header-font: 'anton', sans-serif;
   --main-text-font: 'Mina', sans-serif;
@@ -27,6 +26,7 @@ html, body {
   grid-template-areas: "header header header"
                        "sidebar main main"
                        "footer footer footer";
+  justify-content: space-around;
 }
 
 header {
@@ -36,6 +36,8 @@ header {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-evenly;
+  background: black;
+  height: 100vh;
 }
 
 aside {
@@ -50,17 +52,14 @@ main {
   grid-area: main;
   background-color: #252525 ;
   height: 100%;
-  padding: 1% 0 5% 5%;
+  padding: 1% 0 0 5%;
   position: relative;
   margin-right: 7%;
 }
 
 footer {
-  grid-area: footer;
-  display: flex;
-  justify-content: center;
+  height: 100px;
 }
-
 
 aside button {
   width: 25%;
@@ -168,9 +167,6 @@ img:after {
   text-align: center;
 }
 
-#tools ul li {
-}
-
 #tools ul li h3 {
   font-family: var(--try);
   font-size: 25px;
@@ -192,8 +188,6 @@ img:after {
   font-size: 22px;
 }
 
-#tools ul li:nth-child(even){
-}
 
 #projects ul {
   text-decoration: none;
@@ -203,11 +197,12 @@ img:after {
   display: flex;
   flex-direction: row;
   flex-flow: wrap;
-  justify-content: space-between
+  justify-content: space-between;
+  list-style-type: none;
+
 }
 
 #projects ul li {
-  list-style-type: none;
   flex-shrink: 1;
   width: 48%;
 }
@@ -216,21 +211,89 @@ ul li img {
   width: 100%;
 }
 
-footer ul {
-  padding: 0;
+#contact-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+#contact form {
+  display: inline-block;
+  border: 5px double var(--sub-header-color) ;
+  border-left: none;
+  border-bottom: none;
   margin: 0;
+  flex-grow: 1;
 }
 
-footer ul li {
+#contact form ul {
   list-style-type: none;
-  display: inline;
+  margin: 0;
+  padding: 0 3% 0 3%;
 }
 
-.contactIcons {
-  font-size: 100px;
-  color: black;
+#contact form ul li {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+}
+
+#contact form ul li textarea {
+  height: 80px;
+}
+
+#contact form ul label {
+  display: block;
+  margin: 20px 0 5px 0;
+  color: var(--h3-color);
+  font-size: 25px;
+  font-family: var(--try);
+  width: 20px;
+}
+
+#contact form ul li input, textarea {
+  border: none;
+  background: white;
+  border-radius: 10px;
+  height: 40px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#contact form ul li input, button , textarea:focus {
+  outline: none;
+}
+
+#contact form button {
+  opacity: 100;
+  display: block;
+  margin: 2% auto;
+  width: 200px;
+  height: 50px;
+  border: 3px ridge var(--sub-header-color);
+  background: white;
+  border-radius: 10px;
+  font-family: var(--try);
+  font-size: 30px;
+  color: var(--h3-color)
+}
+
+#contact #social {
+  display: inline-block;
+  padding-top: 5%;
+  border: 5px double var(--sub-header-color);
+  border-bottom: none;
   text-align: center;
-  margin: 0 50px;
+  flex-grow: 1;
+}
+
+#contact #social div {
+  height: 200px;
+}
+
+.socialIcons {
+  font-size: 100px;
+  color: white;
 }
 
 /*
@@ -304,13 +367,24 @@ transition: width 2s;
   }
 
   #projects ul li {
-    width: 95%;
+    flex-basis: 95%;
+  }
+
+  #contact form {
+    flex-basis: 80%;
+    border-bottom: none;
+  }
+
+  #contact #social {
+    flex-basis: 95%;
+    border-bottom: none;
+    border-left: none;
   }
 }
 
 @media only screen and (max-width:609px){
   header h1 {
-    font-size: 35px;
+    font-size: 20px;
   }
   
   #tools ul {
@@ -319,5 +393,19 @@ transition: width 2s;
 
   #tools ul li {
     flex-basis: 80%;
+  }
+
+  #contact form button {
+    width: 150px;
+  }
+
+  #grid {
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: auto;
+    grid-template-areas: "header header header"
+                         "main main main"
+                         "footer footer footer";
+    justify-content: space-around;
   }
 }
