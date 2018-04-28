@@ -4,6 +4,7 @@
 
 :root {
   --main-header-color: #252525;
+  --font-header-color: #008080;
   --sub-header-color: #daa520;;
   --sub-header-font: 'anton', sans-serif;
   --main-text-font: 'Mina', sans-serif;
@@ -31,12 +32,8 @@ html, body {
 
 header {
   grid-area: header;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-evenly;
-  background: black;
+  background: var(--main-header-color);
+  margin-bottom: 1%;
   height: 100vh;
 }
 
@@ -73,12 +70,27 @@ aside button {
 header h1 {
   font-family: monoton;
   font-size: 50px;
-  color: var(--main-header-color);
-  text-decoration: overline;
+  color: var(--font-header-color);
   white-space: nowrap;
   font-weight: 400;
-  margin-top: 0.5%;
-  margin-bottom: 0px;
+  margin-top: 20%;
+  text-align: center;
+  margin-bottom: 1%;
+}
+
+header h2 {
+  font-family: monoton;
+  font-size: 25px;
+  text-align: center;
+  color: var(--font-header-color);
+  text-decoration-style: dotted;
+  text-decoration-line: overline underline;
+
+}
+
+#nav {
+  margin-top: 5%;
+  text-align: center;
 }
 
 header ul {
@@ -99,7 +111,7 @@ header ul li {
 header ul li a {
   font-family: var(--sub-header-font);
   font-size: 30px;
-  color: var(--main-header-color);
+  color: var(--font-header-color);
   text-decoration: overline;
 }
 
@@ -107,12 +119,13 @@ section h2 {
   font-family: var(--sub-header-font);
   color: var(--sub-header-color);
   font-size: 35px;
+  position: relative;
+  left: 1%;
   margin: 0;
-  text-align: left;
 }
 
 section hr {
-  border-style: solid solid solid solid;
+  border-style: solid;
   border-width: 15px 20px 20px 15px;
   border-color: #252525 var(--sub-header-color) var(--sub-header-color) #252525;
   margin-top: -1.5%;
@@ -184,7 +197,7 @@ img:after {
 
 #tools ul li ul li {
   font-family: var(--main-text-font);
-  color: #FF8080;
+  color: #008080;
   font-size: 22px;
 }
 
