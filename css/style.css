@@ -11,6 +11,8 @@
   --main-text-color: white;
   --h3-color: #0080C0;
   --try: 'Fascinate+Inline', sans-serif;
+  --main-background: #313a34;
+  --body-background: #a0c2ca;
 }
 
 html, body {
@@ -62,7 +64,15 @@ header h2 {
 #nav {
   margin-top: 5%;
   text-align: center;
-  transition: transform 200ms linear;
+  transition: opacity 200ms linear;
+}
+
+.navtry {
+  opacity: 0;
+}
+
+.navTrigger1 {
+  opacity: 1;
 }
 
 #nav ul {
@@ -96,24 +106,25 @@ aside {
 .navM {
   text-align: center;
   border: 1px solid var(--main-header-color);
-  background: var(--main-header-color);
+  background: #2a3748;
   position: sticky;
   top: 10%;
   left: 100%;
-  width: 50px;
+  width: 0;
+  overflow: hidden;
+  transition: width 200ms linear;
 }
 
 .navM ul {
   display: flex;
   flex-direction: column;
   margin: 0;
-  color: var(--main-header-color);
   list-style-type: none;
   padding: 0;
   text-align: center
 }
 .navM ul li {
-  margin-bottom: 30%;
+  margin-bottom: 20px;
 }
 
 .navM ul a {
@@ -122,11 +133,21 @@ aside {
   color: #848282;
   text-decoration: none;
   font-weight: 800;
-  animation: try 5s infinite;
+}
+
+.navM ul a:focus {
+  color: var(--sub-header-color);
+  outline: none;
+  
 }
 
 .navM ul :last-child {
   margin: 0;
+}
+
+/*Nav transition trigger class*/
+.navMTrigger {
+  width: 50px;
 }
 
 /* *****Main column***** */
@@ -145,6 +166,13 @@ main {
   position: sticky;
   top: 0;
   z-index: 1;
+  height: 0;
+  overflow: hidden;
+  transition: height 200ms linear;
+}
+
+.navstrigger {
+height: 44px;
 }
 
 .navS ul {
@@ -163,10 +191,13 @@ main {
 .navS ul a {
   font-family: "monoton";
   font-size: 40px;
-  color: #daa520;
+  color: #848282;
   text-decoration: none;
-  font-weight: 800;
-  animation: try 5s infinite;
+}
+
+.navS ul a:focus{
+  color: var(--font-header-color);
+  outline: none;
 }
 
 .navS ul :last-child {
@@ -393,15 +424,19 @@ footer {
 
 @media only screen and (max-width:609px){
   header h1 {
-    font-size: 36px;
+    font-size: 8.5vw;
   }
 
   header h2 {
-    font-size: 20px;
+    font-size: 6vw;
   }
 
   header #nav {
-    margin-top: 40%
+    margin-top: 20%
+  }
+
+  aside {
+    display: none;
   }
   
   #nav ul li a {
