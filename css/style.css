@@ -61,10 +61,15 @@ header h2 {
   margin-top: 0;
 }
 
+nav:focus {
+  outline: none;
+}
+
 #nav {
   margin-top: 5%;
   text-align: center;
   transition: opacity 200ms linear;
+  outline: none;
 }
 
 .navtry {
