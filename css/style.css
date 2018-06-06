@@ -61,10 +61,6 @@ header h2 {
   margin-top: 0;
 }
 
-nav:focus {
-  outline: none;
-}
-
 #nav {
   margin-top: 5%;
   text-align: center;
@@ -101,6 +97,10 @@ nav:focus {
   font-size: 80px;
   color:#556161;
   text-decoration: overline;
+}
+
+#nav ul li a:focus {
+  outline: none;
 }
 
 /* *****Aside(left-column)***** */

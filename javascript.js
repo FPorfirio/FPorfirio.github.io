@@ -9,8 +9,24 @@ const aside = document.getElementById('aside');
 const grid = document.getElementById('grid');
 const sections = document.getElementsByTagName("section");
 
+//Nav links scroll function
+let ele;
+let destination;
+let hash;
 
-//Nav scroll function 
+for(let item of anchor) {
+    item.addEventListener('click', function(e){
+        e.preventDefault();
+        item.focus({preventScroll: true})
+        hash = this.hash.slice(1);
+        h2Height = 0;
+        ele = document.getElementById(hash);
+        destination = main.offsetTop + ele.offsetTop;
+        scrollTo(document.body, destination, 600)
+    })
+}
+
+//Anchor event handler
 function scrollTo(element, to, duration) {
     if (duration <= 0){
         location.hash = hash;
@@ -27,23 +43,6 @@ function scrollTo(element, to, duration) {
         };
         scrollTo(element, to, duration - 10);
     }, 1);
-}
-
-//Nav links scroll handler
-let ele;
-let destination;
-let hash;
-
-for(let item of anchor) {
-    item.addEventListener('click', function(e){
-        e.preventDefault();
-        item.focus({preventScroll: true})
-        hash = this.hash.slice(1);
-        h2Height = 0;
-        ele = document.getElementById(hash);
-        destination = main.offsetTop + ele.offsetTop;
-        scrollTo(document.body, destination, 600)
-    })
 }
 
 //Anchor focus relative to scrollbar
@@ -109,7 +108,7 @@ function resizeThrottler() {
         resizeTimeout = setTimeout(function() {
             resizeTimeout = null;
             actualResizeHandler();
-        }, 1000);
+        }, 500);
     }
 }
 
