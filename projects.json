@@ -1,0 +1,28 @@
+[
+  {
+    "title": "Weather app",
+    "imgUrl": "assets/weatherapp.png",
+    "siteUrl": "https://fporfirio.github.io/WeatherApp/",
+    "githubUrl": "https://github.com/FPorfirio/WeatherApp",
+    "description": "Weather app made with vanilla js and html",
+    "stack": "Html5, javascript, css"
+  },
+  {
+    "title": "React blog",
+    "imgUrl": "assets/reactBlog.png",
+    "siteUrl": "https://fporfirio.github.io/ReactBlog/",
+    "githubUrl": "https://github.com/FPorfirio/ReactBlog",
+    "description": "Blog made using Eeact for the client and Express for the backend",
+    "stack": "React, Redux, React-router, Express, Mongodb, Cloudinary, Ajv JSON schema validator",
+    "features": "Spa with multiple routes, Auth system using refresh tokens, Assets optimization using cloudinary"
+  },
+  {
+    "title": "Shop static site",
+    "imgUrl": "assets/best-burguer.png",
+    "siteUrl": "https://fporfirio.github.io/Bestburger-staticapp/#main-dish/",
+    "githubUrl": "https://github.com/FPorfirio/Bestburger-staticapp/",
+    "description": "Very simple site",
+    "stack": "Html5, javascript, css",
+    "features": "Responsive, animations based on user intraction"
+  }
+]

@@ -1,149 +1,195 @@
+
+
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="css/style.css" class="rel">
-  <title>Facundo Porfirio</title>
-</head>
-<body id="body">
-  <div id="grid">
-
-    <header>
-      <h1>Facundo Porfirio</h1>
-      <h2>Front-end Developer</h2>
-      <nav id="nav">
-        <ul>
-          <li>
-            <a href="#about">
-              <i class="fas fa-user-circle"></i>
-            </a>
-          </li>
-          <li>
-            <a href="#tools">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/style.css" class="rel" />
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
+    <title>Facundo Porfirio</title>
+  </head>
+  <body id="body">
+    <div id="grid">
+      <header class='heroHeader'>
+        <button class='themeBtn--hero' id='themeBtn'>
+          <img src='/assets/light.svg'>
+        </button>
+        <h1>Facundo Porfirio</h1>
+        <h2>Front-end Developer</h2>
+        <nav id="nav">
+          <ul>
+            <li>
+              <a href="#about">
+                <i class="fas fa-user-circle"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#tools">
                 <i class="fas fa-wrench"></i>
-            </a>
-          </li>
-          <li>
-            <a href="#projects">
+              </a>
+            </li>
+            <li>
+              <a href="#projects">
                 <i class="fas fa-briefcase"></i>
-            </a>
-          </li>
-          <li>
-            <a href="#contact">
+              </a>
+            </li>
+            <li>
+              <a href="#contact">
                 <i class="far fa-envelope"></i>
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </header>
 
-    <aside id="aside"> 
-    </aside>
+      <aside id="aside"></aside>
 
-    <main id="main">
-      <section id="about">
-        <h2>About Me</h2>
-        <hr class="borders">
-        <div id="description">
-          <p>I'm Facundo Porfirio, a front end developer based on Buenos Aires </p>
-          <p>My goal is to make fast, responsive, intuitive, and good looking web apps</p>
-        </div>
-      </section>
-      <section id="tools">
-        <h2>Tools</h2>
-        <hr>
-        <ul>
-          <li>
-            <h3>Technologies</h3>
-            <ul>
-              <li>Javascript</li>
-              <li>Ruby</li>
-              <li>Html5</li>
-              <li>Css</li>
-            </ul>
-          </li>
-          <li>
-            <h3>Frameworks</h3>
-            <ul>
-              <li>Rails</li>
-              <li>Bootstrap 4</li>
-            </ul>
-          </li>
-          <li>
-            <h3>Dev Tools</h3>
-            <ul>
-              <li>Visual Studio Code</li>
-              <li>Git</li>
-              <li>Jekyll</li>
-              <li>Webpack</li>
-              <li>Google Cloud Platform</li>
-            </ul>
-          </li>
-          <li>
-            <h3>libraries</h3>
-            <ul>
-              <li>Jquery</li>
-            </ul>
-          </li>
-        </ul>
-      </section>
-      <section id="projects">
-        <h2>Projects</h2>
-        <hr>
-        <ul>
-          <li><a href="https://fporfirio.github.io/TwitchViewer/" target="_blank"><img src="assets/Main-twitch.png"></a></li>
-          <li><a href="https://fporfirio.github.io/WeatherApp/" target="_blank"><img src="assets/Main-weather.png"></a></li>
-          <li><a href="https://fporfirio.github.io/WikipediaApp/" target="_blank"><img src="assets/Main-wiki.png"></a></li>
-        </ul>
-      </section>
-      <section id="contact">         
+      <main id="main">
+        <section id="about">
+          <h2>About Me</h2>
+          <hr class="borders" />
+          <div id="description">
+            <p>
+              I'm Facundo Porfirio, a front end developer based on Buenos Aires
+            </p>
+            <p>
+              My goal is to make fast, responsive, intuitive, and good looking
+              web apps
+            </p>
+          </div>
+        </section>
+        <section id="tools">
+          <h2>Tools</h2>
+          <hr />
+          <ul>
+            <li>
+              <h3>Technologies</h3>
+              <ul>
+                <li>Javascript</li>
+                <li>Ruby</li>
+                <li>Html5</li>
+                <li>Css</li>
+              </ul>
+            </li>
+            <li>
+              <h3>Frameworks</h3>
+              <ul>
+                <li>Rails</li>
+                <li>Bootstrap 4</li>
+              </ul>
+            </li>
+            <li>
+              <h3>Dev Tools</h3>
+              <ul>
+                <li>Visual Studio Code</li>
+                <li>Git</li>
+                <li>Jekyll</li>
+                <li>Webpack</li>
+                <li>Google Cloud Platform</li>
+              </ul>
+            </li>
+            <li>
+              <h3>libraries</h3>
+              <ul>
+                <li>Jquery</li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+        <section id="projects">
+          <h2>Projects</h2>
+          <hr />
+          <ul>
+          </ul>
+        </section>
+        <section id="contact">
           <h2>CONTACT ME</h2>
-          <hr>
+          <hr />
           <div id="contact-wrapper">
-            <form action="https://formspree.io/facundojporfirio@gmail.com" method="POST">
+            <form
+              action="https://formspree.io/facundojporfirio@gmail.com"
+              method="POST"
+            >
               <ul>
                 <li>
-                  <label for="name">  
-                    <span>Name</span>               
+                  <label for="name">
+                    <span>Name</span>
                   </label>
-                  <input type="text" name="" id="name" required>
+                  <input type="text" name="" id="name" required />
                 </li>
                 <li>
-                  <label for="email">      
-                    <span>Email</span>          
+                  <label for="email">
+                    <span>Email</span>
                   </label>
-                  <input type="email" name="" id="email" required>
+                  <input type="email" name="" id="email" required />
                 </li>
                 <li>
-                  <label for="message">      
-                    <span>Message</span>        
+                  <label for="message">
+                    <span>Message</span>
                   </label>
-                  <textarea type="text" name="" id="message" required></textarea>
+                  <textarea
+                    type="text"
+                    name=""
+                    id="message"
+                    required
+                  ></textarea>
                 </li>
               </ul>
               <button type="submit">Submit</button>
             </form>
-          <div id="social">
-            <div><a href="https://www.linkedin.com/in/facundo-porfirio-92b832161/" target="_blank"><i class="fab fa-linkedin-in socialIcons"></i></a></div>
-            <div><a href="https://github.com/FPorfirio" target="_blank"><i class="fab fa-github-square socialIcons"></i></a></div>
+            <div id="social">
+              <div>
+                <a
+                  href="https://www.linkedin.com/in/facundo-porfirio-92b832161/"
+                  target="_blank"
+                  ><i class="fab fa-linkedin-in socialIcons"></i
+                ></a>
+              </div>
+              <div>
+                <a href="https://github.com/FPorfirio" target="_blank"
+                  ><i class="fab fa-github-square socialIcons"></i
+                ></a>
+              </div>
+            </div>
           </div>
-        </div>
         </section>
-    </main>
-
-    <footer>
-    </footer>
-    
-  </div>
-  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
-  <script type="text/javascript" src="javascript.js"></script>
-</body>
+      </main>
+      <template id="projectCard">
+        <article class="card">
+            <header class="card_header">
+              <div class="card_links">
+                <a class='card_link' href="">Link</a>
+                <a class='card_link' href="">Github</a>
+              </div>
+              <h3 class="card_title"></h2>
+            </header>
+          <section class="card_portrait">
+            <a class="card_portraitLink">
+              <img class="card_portraitImg" />
+            </a>
+          </section>
+          <section class="cardTab">
+            <div class="cardTab_btns">
+              <button class="cardTab_btn">Description</button>
+              <button class="cardTab_btn cardtab_btn--separator">Stack</button>
+              <button class="cardTab_btn">Features</button>
+            </div>
+            <div class="cardTab_content"></div>
+          </section>
+        </div>
+      </template>
+      <footer></footer>
+    </div>
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"
+      integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" type="text/javascript" src="javascript.js"></script>
+  </body>
 </html>
-
-
-
-
-
-
-
