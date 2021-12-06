@@ -7,10 +7,10 @@
   --heroh2_color-light: #252525c4;
   --heroNav_color-light: #252525c4;
   --body_bkg-light: #8e9aaf;
-  --main_bkg-light: #ffffff;
+  --main_bkg-light: #f0f0f0;
   --h2_color-light: #3e5067;
   --h2_font-light: "anton", sans-serif;
-  --h3_color-light: #ee6c4d;
+  --h3_color-light: #e95b39;
   --h3_font-light: "Fascinate+Inline", sans-serif;
   --text_color-light: black;
   --text_font-light: "Mina", sans-serif;
@@ -23,6 +23,8 @@
   --card_bkg-light: #c3c9d0;
   --card_brd-light: 1px solid #3e5067;
   --card_color-light: #2a3748;
+  --social_color-light: #3e5067;
+  --social_brd-light: red;
 
   --hero_bkg-dark: #222831;
   --heroH1_color-dark: #f05454;
@@ -45,6 +47,8 @@
   --card_bkg-dark: #2a3748;
   --card_brd-dark: 1px solid #7e98af;
   --card_color-dark: white;
+  --social_color-dark: #dbd8e3;
+  --social_brd-dark: red;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -70,6 +74,8 @@
     --card_bkg: var(--card_bkg-dark);
     --card_brd: var(--card_brd-dark);
     --card_color: var(--card_color-dark);
+    --social_color: var(--social_color-dark);
+    --social_brd: var(--social_brd-dark);
   }
 }
 
@@ -96,6 +102,8 @@
     --card_bkg: var(--card_bkg-light);
     --card_brd: var(--card_brd-light);
     --card_color: var(--card_color-light);
+    --social_color: var(--social_color-light);
+    --social_brd: var(--social_brd-light);
   }
 }
 
@@ -121,6 +129,8 @@
   --card_bkg: var(--card_bkg-dark);
   --card_brd: var(--card_brd-dark);
   --card_color: var(--card_color-dark);
+  --social_color: var(--social_color-dark);
+  --social_brd: var(--social_brd-dark);
 }
 
 [color-scheme="light"] {
@@ -145,6 +155,8 @@
   --card_bkg: var(--card_bkg-light);
   --card_brd: var(--card_brd-light);
   --card_color: var(--card_color-light);
+  --social_color: var(--social_color-light);
+  --social_brd: var(--social_brd-light);
 }
 
 html,
@@ -502,6 +514,7 @@ ul li img {
   font-family: var(--h3_font);
   width: 20px;
   font-weight: bold;
+  transition: none;
 }
 
 #contact form ul li input,
@@ -539,7 +552,8 @@ textarea:focus {
 
 #contact #social {
   display: inline-block;
-  padding-top: 5%;
+  padding-top: 2%;
+  padding-bottom: 3%;
   border: 5px double var(--body_bkg);
   border-bottom: none;
   text-align: center;
@@ -552,7 +566,8 @@ textarea:focus {
 
 .socialIcons {
   font-size: 100px;
-  color: white;
+  color: var(--social_color);
+  transition: none;
 }
 
 .card {
@@ -685,6 +700,8 @@ footer {
 
   #contact #social {
     flex-basis: 95%;
+    padding-top: 5%;
+    padding-bottom: 0;
     border-bottom: none;
     border-left: none;
   }

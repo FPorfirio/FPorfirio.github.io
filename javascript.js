@@ -122,7 +122,6 @@ function toggleElement() {
 //color navIcon based window scroll position matching respective hash section
 function relativeFocus() {
   if (isOnVIew(sections[0])) {
-    console.log("isonviewwww");
     toggleNavIcon(anchor[0]);
     return;
   } else if (isOnVIew(sections[1])) {
@@ -150,7 +149,7 @@ function actualResizeHandler() {
 
   if (
     document.body.scrollTop >= navOffset &&
-    windowsWidth > 609 && //si el scroll ya dejo fuera de vision al nav y el ancho del windows es de mas de 600px
+    windowsWidth > 609 &&
     nav.parentElement != aside
   ) {
     nav.id = "";
