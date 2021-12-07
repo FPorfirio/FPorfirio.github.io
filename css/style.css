@@ -167,7 +167,7 @@ body {
 }
 
 * {
-  transition: background-color 1000ms ease-in, color 1000ms ease-in;
+  transition: background-color 500ms ease-in, color 1000ms ease-in;
 }
 
 #themeBtn {
@@ -226,6 +226,11 @@ body {
   text-decoration-style: dotted;
   text-decoration-line: overline underline;
   margin-top: 0;
+}
+
+.heroHeader span {
+  color: var(--heroh2_color);
+  margin-left: 9px;
 }
 
 #nav {
@@ -612,9 +617,6 @@ textarea:focus {
   background: #3e5067;
   padding: 0.3rem 0.3rem 0.3rem 0.3rem;
   border-radius: 3px;
-}
-
-.card_portrait {
 }
 
 .card_portraitImg {
